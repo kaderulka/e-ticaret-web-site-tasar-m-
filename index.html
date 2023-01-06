@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-wifth,initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*MENÜ KISMI*/
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box; /*kenardaki boşluklar */
+        }
+        header{
+            background-color:white;
+            padding: 0px 40px;  /*arkaplan ile yazı arasındaki mesafeyi açmak için*/
+        }
+        nav{
+            display: inline-block;  /*etiketleri yan yana getirmek için kullanılır.*/
+           
+            text-align: right; /*sağa hizalama*/
+        }
+        nav ul{
+            list-style-type:none;
+        }
+        nav ul li{
+            float: left;
+            position: relative;
+            width: 200px;
+        }
+        nav ul li ul{
+            display: none;
+            position:absolute;
+            left: 0;
+            top:40px;
+        }
+        nav ul li a{
+            display: block;
+            width: 180px;
+            height: 40px;
+            line-height: 40px;
+            color: black;
+            background-color: white;
+            text-align: center;
+            text-decoration: none; /*yazının altını, üztünü çizmek veya varolanı silmek için kullanılır.*/
+
+        }
+        nav ul li a:hover{
+          
+            background-color:bisque;
+            color:black;
+        }
+        nav ul li:hover ul{
+            display: block;
+        }
+
+    /*MENÜ ALTINDAKİ RESİM KISMI*/
+
+    #section-1{
+        background-image: linear-gradient(rgba(0,0,0,0.8)
+        ,rgba(0,0,0,0.8)), url(image/2.jpg);
+        background-position: top;  /*arkaplana yerleştirdiğimiz resmin konumunu belirtmek için kullanılır.*/
+        padding: 280px;
+        height: 150px;
+        width: 100%;
+        background-size: cover;
+    }
+    .btn-s1{
+        margin-left: 25%;   /*html ögelerine sol dış boşluk vermek için kullanılır.*/
+        margin-top: 20px;   /*html öğelerine yukarı dış boşluk vermek için kullanılır.*/
+        background-color:bisque;
+        color:black;
+        padding: 10px 20px; /*ilk değer alttan üstten değeri ikinci değer sağdan soldan değeri*/
+        font-size: 20px;    
+        border-radius: 6px;  /*kenarlık yuvarlatma*/
+        transition: color 1s;
+
+        }
+        .btn-s1:hover{
+            color: white;
+        }
+        
+        
+        /*KART*/
+        #section-2{
+            display: flex;
+            justify-content:space-around;
+            margin: 70px 0px;
+        }
+        .card{
+            width: 20%; /*resmin genişlik kısmı*/
+            box-shadow: 0px 5px 9px 0 rgba(0,0,0,0.4);  /*gölge efekti vermek için kullanılır.*/
+            border-radius: 20px;
+        }
+        .card:hover{
+            opacity:0,7;
+        }
+    /*kartların içerik kısmı*/
+    .container{
+        padding: 15px 20px;
+    }
+    .container p{
+        margin: 20px 0; /*parke başlığı ile yazısı arası boşlık ayarlama*/
+    }
+    /*resim için*/
+    img{
+        border-radius: 50px 50px 50px 50px;
+        width: 290px;
+    }
+    p{
+        font-size: 19px; /*yazının büyüklüğü*/
+    }
+
+    #section-3{
+            display: flex;
+            justify-content:space-around;
+            margin:200px 0px;
+        }
+        footer{
+            background-color: black;
+            color:white;
+            text-align: center;
+            font-size: 20px;
+            padding: 20px 0;
+        }
+
+
+
+
+
+      
+    </style>
+</head>
+<body>
+   
+    <header>
+        <img src="image/logo.jpg" alt="logo" width="150" height="80"  />
+        <nav>
+            <ul>
+                <li><a href="#">ANA SAYFA</a></li>
+                <li><a href="#">ÜRÜNLER</a>
+                    <ul>
+                        <li><a href="parke.html">PARKE</a></li>
+                        <li><a href="masa.html">MASA</a></li>
+                        <li><a href="amerikan kapı.html">AMERİKAN KAPI</a></li>
+                        <li><a href="mutfak dolabı.html">MUTFAK DOLABI</a></li>
+                        <li><a href="banyo dolabı.html">BANYO DOLABI</a></li>
+                        <li><a href="celikkapı.html">ÇELİK KAPI</a></li>
+                        <li><a href="pimapen pencre.html">PİMAPEN PENCERE</a></li>
+                        <li><a href="kombi.html">KOMBİ</a></li>
+                        
+                    </ul>
+                </li>
+                <li><a href="#">HAKKIMIZDA</a></li>
+                <li><a href="#">İLETİŞİM</a></li>
+                <li><a href="#">MENÜ</a></li>
+            </ul>
+        </nav>
+
+        
+    </header>
+    
+    <main>
+        <section id="section-1">
+            <button class="btn-s1"> TREND MODELLERİ GÖRMEK İÇİN TIKLAYIN</button>
+        </section>
+        
+        <section id="section-2">
+            <div class="card">
+                <img src="image/model1.jpg" alt="">
+                <div class="container">
+                    <h2>KANADA</h2>
+                    <p>Beyazlar şehri Kanada! Güçlü iklimi ve etkileyici doğasından ilhamla tasarlanan beyazlar içindeki özgün dokunuşu hisset.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="image/model2.jpg" alt="">
+                <div class="container">
+                    <h2>FLORİDA</h2>
+                    <p>Florida sahillerinin esintisi! Florida sahillerinin gri-beyaz toprak tonlarından esinlenerek üretilmiş parkemiz ile sahil havasını evinizde hissedin.
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="image/mdel3.jpg" alt="">
+                <div class="container">
+                    <h2>LABRADOR</h2>
+                    <p>Mekanına farklı bir boyut kat! Renklerin doğayla iç içe geçtiği içinizi ısıtacak dekoru evlerinize çağırın.</p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="section-3">
+            <div class="card">
+                <img src="image/model4.jpg" alt="">
+                <div class="container">
+                    <h2>KALEDONYA</h2>
+                    <p>Adım adım Kaledonya! Kaledonya adasının sıcacık toprak tonunu adımlarınızda hissedin.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="image/model5.jpg" alt="">
+                <div class="container">
+                    <h2>SAMOA</h2>
+                    <p>Samoa’nın Adaları’nın manzarası… Samoa Adaları’nın sislerinin gölgesindeki manzarayı evlerinize taşıyın.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="image/model6.jpg" alt="">
+                <div class="container">
+                    <h2>PANAMA</h2>
+                    <p>Panama sahillerinin enerjisi! Panama sahillerinin ışıltılı enerjisini yaşam alanlarınıza taşıyın.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        © Telif hakkı 2022 KERGK Ağaç Sanayi ve Ticaret A.Ş. | Tüm Hakları Saklıdır.
+    </footer>
+</body>
+</html>
